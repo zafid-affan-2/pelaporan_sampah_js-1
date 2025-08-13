@@ -13,6 +13,9 @@ app.use('/report-status', require('./get_report_status'));
 app.use('/user', require('./get_user'));
 app.use('/user-report', require('./get_user_report'));
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+//app.listen(PORT, () => {
+//  console.log(`Server running on port ${PORT}`);
+//}); (tidak di pake, karena pake vercel
+
+// Export app ke Vercel
+module.exports = app;
